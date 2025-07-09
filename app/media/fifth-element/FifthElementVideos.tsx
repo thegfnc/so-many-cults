@@ -12,7 +12,7 @@ export default function FifthElementVideos() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFadingOut(true);
-    }, 4000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -41,7 +41,7 @@ export default function FifthElementVideos() {
         volume={0}
         width="100%"
         height="100%"
-        className={`absolute inset-0 object-cover transition-opacity duration-7000 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}
+        className={`absolute inset-0 object-cover transition-opacity duration-3000 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}
       />
     </>
   )
