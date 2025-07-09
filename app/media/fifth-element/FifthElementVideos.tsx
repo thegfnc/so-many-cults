@@ -24,6 +24,9 @@ export default function FifthElementVideos() {
         playing={true}
         loop={true}
         muted={true}
+        playsInline={true}
+        controls={false}
+        volume={0}
         width="100%"
         height="100%"
         className="absolute inset-0 object-cover"
@@ -33,6 +36,9 @@ export default function FifthElementVideos() {
         playing={true}
         loop={true}
         muted={true}
+        playsInline={true}
+        controls={false}
+        volume={0}
         width="100%"
         height="100%"
         className={`absolute inset-0 object-cover transition-opacity duration-7000 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}
