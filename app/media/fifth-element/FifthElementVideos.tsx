@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ReactPlayer from 'react-player'
 
 const GUY_VIDEO_URL = 'https://cdn.sanity.io/files/ojzttvlq/production/a22fc6d1010bf4acdda949c6301bd4cea9c9834a.mp4';
@@ -9,13 +9,11 @@ const SWIRL_VIDEO_URL = 'https://cdn.sanity.io/files/ojzttvlq/production/b36d374
 export default function FifthElementVideos() {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  const handleGuyVideoStart = () => {
+    setTimeout(() => {
       setIsFadingOut(true);
     }, 6000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  };
 
   return (
     <>
@@ -41,6 +39,7 @@ export default function FifthElementVideos() {
         volume={0}
         width="100%"
         height="100%"
+        onStart={handleGuyVideoStart}
         className={`absolute inset-0 object-cover transition-opacity duration-2000 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}
       />
     </>
